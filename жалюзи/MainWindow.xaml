@@ -1,0 +1,95 @@
+﻿<Window x:Class="жалюзи.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:жалюзи"
+        mc:Ignorable="d"
+        Title="Жалюзи" Height="340" Width="350">
+    <Grid>
+        <TabControl>
+            <TabItem Header="ListBox">
+                <Grid Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="102"/>
+                        <ColumnDefinition Width="90"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="45"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Style="{DynamicResource 0}">Высота (см)</Label>
+                    <TextBox Grid.Column="1" Style="{DynamicResource 1}" x:Name="txtHeight1" PreviewTextInput="txt_PreviewTextInput"/>
+
+                    <Label Grid.Column="2" Style="{DynamicResource 0}" VerticalAlignment="Bottom" Margin="20,0,0,0">Материал</Label>
+                    <ListBox Grid.Row="1" Grid.Column="2" Style="{DynamicResource 3}" x:Name="lstbx">
+                        <ListBoxItem>Пластик</ListBoxItem>
+                        <ListBoxItem>Алюминий</ListBoxItem>
+                    </ListBox>
+
+                    <Label Grid.Row="1" Style="{DynamicResource 0}">Ширина (см)</Label>
+                    <TextBox Grid.Column="1" Grid.Row="1" Style="{DynamicResource 1}" PreviewTextInput="txt_PreviewTextInput" x:Name="txtWidth1"/>
+
+                    <Button Grid.Row="2" Style="{DynamicResource 2}" Click="btnSchet1_Click" Grid.ColumnSpan="3">Расчитать</Button>
+
+                    <Label Grid.Row="3" Style="{DynamicResource 0}">Размер</Label>
+                    <Label Grid.Row="3" Grid.Column="1" x:Name="lblSize1" Style="{DynamicResource 0}"></Label>
+
+                    <Label Grid.Row="4" Style="{DynamicResource 0}">Цена (р. за кв.м.)</Label>
+                    <Label Grid.Row="4" Grid.Column="1" x:Name="lblPrise1" Style="{DynamicResource 0}"></Label>
+
+                    <Label Grid.Row="5" Style="{DynamicResource 0}">Стоимость</Label>
+                    <Label Grid.Row="5" Grid.Column="1" x:Name="lblSumm1" Style="{DynamicResource 0}"></Label>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="ComboBox">
+                <Grid Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="102"/>
+                        <ColumnDefinition Width="90"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Style="{DynamicResource 0}">Высота (см)</Label>
+                    <TextBox Grid.Column="1" Style="{DynamicResource 1}" x:Name="txtHeight2" PreviewTextInput="txt_PreviewTextInput"/>
+
+                    <Label Grid.Column="2" Style="{DynamicResource 0}" VerticalAlignment="Bottom" Margin="20,0,0,0">Материал</Label>
+                    <ComboBox Grid.Row="1" Grid.Column="2" Style="{DynamicResource 4}" x:Name="cmbbx">
+                        <ComboBoxItem>Пластик</ComboBoxItem>
+                        <ComboBoxItem>Алюминий</ComboBoxItem>
+                    </ComboBox>
+
+                    <Label Grid.Row="1" Style="{DynamicResource 0}">Ширина (см)</Label>
+                    <TextBox Grid.Column="1" Grid.Row="1" Style="{DynamicResource 1}" PreviewTextInput="txt_PreviewTextInput" x:Name="txtWidth2"/>
+
+                    <Button Grid.Row="2" Style="{DynamicResource 2}" Click="btnSchet2_Click" Grid.ColumnSpan="3">Расчитать</Button>
+
+                    <Label Grid.Row="3" Style="{DynamicResource 0}">Размер</Label>
+                    <Label Grid.Row="3" Grid.Column="1" x:Name="lblSize2" Style="{DynamicResource 0}"></Label>
+
+                    <Label Grid.Row="4" Style="{DynamicResource 0}">Цена (р. за кв.м.)</Label>
+                    <Label Grid.Row="4" Grid.Column="1" x:Name="lblPrise2" Style="{DynamicResource 0}"></Label>
+
+                    <Label Grid.Row="5" Style="{DynamicResource 0}">Стоимость</Label>
+                    <Label Grid.Row="5" Grid.Column="1" x:Name="lblSumm2" Style="{DynamicResource 0}"></Label>
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
